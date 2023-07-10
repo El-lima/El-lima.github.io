@@ -11,6 +11,10 @@ const textButtons = document.querySelectorAll('.contact__btn');
 var swiper = new Swiper(".mySwiper", {
     slidesPerView: 1,
     spaceBetween: 20,
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: true,
+        },
     pagination: {
         el: ".swiper-pagination",
         clickable: true,
