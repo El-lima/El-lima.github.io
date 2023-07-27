@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>NAEEES TPI's Chapter</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link rel=" stylesheet" href="css/slick.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    </head>
+    <style>
+        .row > .column {
+      padding: 0 8px;
+    }
+    
+    .row {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        /* grid-template-columns: 40% 60%; */
+        flex-wrap: wrap;
+        padding: 0 4px;
+        /* margin-top: 5rem; */
+        align-items: stretch;
+    }
+    
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    
+    /* Create four equal columns that floats next to eachother */
+    .column {
+      float: left;
+      width: 25%;
+    }
+    
+    /* The Modal (background) */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      padding-top: 100px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: black;
+    }
+    
+    /* Modal Content */
+    .modal-content {
+      position: relative;
+      background-color: #fefefe;
+      margin: auto;
+      padding: 0;
+      width: 90%;
+      max-width: 1200px;
+    }
+    
+    /* The Close Button */
+    .close {
+      color: white;
+      position: absolute;
+      top: 60px;
+      right: 25px;
+      font-size: 35px;
+      font-weight: bold;
+    }
+    
+    .close:hover,
+    .close:focus {
+      color: #999;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    
+    /* Hide the slides by default */
+    .mySlides {
+      display: none;
+    }
+    
+    /* Next & previous buttons */
+    .prev,
+    .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -50px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      -webkit-user-select: none;
+      /* height: 100%; */
+    }
+    
+    /* Position the "next button" to the right */
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover,
+    .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+    
+    /* Number text (1/3 etc) */
+    .numbertext {
+      color: #f2f2f2;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
+    
+    /* Caption text */
+    .caption-container {
+      text-align: center;
+      background-color: black;
+      padding: 2px 16px;
+      color: white;
+    }
+    
+    img {
+      padding: 0.1rem;
+    }
+    img.demo {
+      opacity: 0.6;
+    }
+    
+    .active,
+    .demo:hover {
+      opacity: 1;
+    }
+    
+    img.hover-shadow {
+      transition: 0.3s;
+    }
+    
+    .hover-shadow:hover {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    
+    @media screen and (max-height: 600px) {
+      .row {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    /*==================================== Media Queries (small screen) ====================================*/
+    @media screen and (max-width: 600px) {
+      .row {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    </style>
+<body>
+
+    <div class="site-wrapper">
+        <div class="main-overlay"></div>
+        <header class="header-default">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-xl">
+                    <!-- logo  -->
+                    <a href="index.html" class="">
+                        <img src="images/logo.jpg" alt="" class="navbar-brand">
+                    </a>
+
+                    <div class="collapse navbar-collapse">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                                <a href="index.html" class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="about.html" class="nav-link">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Contact</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Notification</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="register.html" class="nav-link">Register</a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+
+                    <!-- right side of header  -->
+                    <div class="header-right">
+                        <ul class="social-icons list-unstyled list-inline mb-0">
+                            <li class="list-inline-item">
+                                <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                            </li>
+                        </ul>
+                        <div class="header-buttons">
+
+                            <button class="search icon-button">
+                                <i class="icon-magnifier"></i>
+                            </button>
+                            <button class="burger-menu icon-button">
+                                <span class="burger-icon"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+        </header>
+
+           <!-- Images used to open the lightbox -->
+<div class="row">
+    <img src="images/sport (1).jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+    <img src="images/sport (11).jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
+    <img src="images/students (11).jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
+    <img src="images/students.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+    <img src="images/sport (15).jpg" onclick="openModal();currentSlide(5)" class="hover-shadow">
+    <img src="images/students (14).jpg" onclick="openModal();currentSlide(6)" class="hover-shadow">
+    <img src="images/sport (28).jpg" onclick="openModal();currentSlide(7)" class="hover-shadow">
+    <img src="images/defence (1).jpg" onclick="openModal();currentSlide(8)" class="hover-shadow">
+    <img src="images/defence (6).jpg" onclick="openModal();currentSlide(9)" class="hover-shadow">
+    <img src="images/defence (12).jpg" onclick="openModal();currentSlide(10)" class="hover-shadow">
+    <img src="images/sport (16).jpg" onclick="openModal();currentSlide(11)" class="hover-shadow">
+    <img src="images/class/four pillar.png" onclick="openModal();currentSlide(12)" class="hover-shadow">
+    <img src="images/events (1).jpg" onclick="openModal();currentSlide(13)" class="hover-shadow">
+    <img src="images/events (7).jpg" onclick="openModal();currentSlide(14)" class="hover-shadow">
+    <img src="images/IMG-20230629-WA0175.jpg" onclick="openModal();currentSlide(15)" class="hover-shadow">
+    <img src="images/rep.jpg" onclick="openModal();currentSlide(16)" class="hover-shadow">
+    <img src="images/tutor.jpg" onclick="openModal();currentSlide(17)" class="hover-shadow">
+    <img src="images/students (25).jpg" onclick="openModal();currentSlide(18)" class="hover-shadow">
+    <img src="images/sport (22).jpg" onclick="openModal();currentSlide(19)" class="hover-shadow">
+    <img src="images/students (22).jpg" onclick="openModal();currentSlide(20)" class="hover-shadow">
+    <img src="images/students (26).jpg" onclick="openModal();currentSlide(21)" class="hover-shadow">
+    <img src="images/students (33).jpg" onclick="openModal();currentSlide(22)" class="hover-shadow">
+    <img src="images/students (25).jpg" onclick="openModal();currentSlide(23)" class="hover-shadow">
+    <img src="images/events (7).jpg" onclick="openModal();currentSlide(24)" class="hover-shadow">
+    <img src="images/exco_p.jpg" onclick="openModal();currentSlide(25)" class="hover-shadow">
+    <img src="images/sport (20).jpg" onclick="openModal();currentSlide(26)" class="hover-shadow">
+    <img src="images/class/tetfund.jpg" onclick="openModal();currentSlide(27)" class="hover-shadow">
+    <img src="images/students (35).jpg" onclick="openModal();currentSlide(28)" class="hover-shadow">
+    <img src="images/students (42).jpg" onclick="openModal();currentSlide(29)" class="hover-shadow">
+    <img src="images/students (45).jpg" onclick="openModal();currentSlide(30)" class="hover-shadow">
+    <img src="images/students (48).jpg" onclick="openModal();currentSlide(31)" class="hover-shadow">
+  
+</div>
+
+<!-- The Modal/Lightbox -->
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 31</div>
+      <img src="images/sport (1).jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 31</div>
+      <img src="images/sport (11).jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 31</div>
+      <img src="images/students (11).jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">4 / 31</div>
+      <img src="images/students.jpg" style="width:100%">
+    </div>
+
+
+    <div class="mySlides">
+      <div class="numbertext">5 / 31</div>
+      <img src="images/sport (15).jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">6 / 31</div>
+      <img src="images/students (14).jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">7 / 31</div>
+      <img src="images/sport (28).jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">8 / 31</div>
+      <img src="images/defence (1).jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">9 / 31</div>
+      <img src="images/defence (6).jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">10 / 31</div>
+      <img src="images/defence (12).jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">11 / 31</div>
+      <img src="images/sport (16).jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">12 / 31</div>
+      <img src="images/four pillar.png" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">13 / 31</div>
+      <img src="images/events (1).jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">14 / 31</div>
+      <img src="images/events (7).jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">15 / 31</div>
+      <img src="images/IMG-20230629-WA0175.jpg" style="width:100%">
+    </div>
+
+
+    <div class="mySlides">
+        <div class="numbertext">16 / 31</div>
+        <img src="images/rep.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+        <div class="numbertext">17 / 31</div>
+        <img src="images/tutor.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+        <div class="numbertext">18 / 31</div>
+        <img src="images/students (25).jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+        <div class="numbertext">19 / 31</div>
+        <img src="images/sport (22).jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+        <div class="numbertext">20 / 31</div>
+        <img src="images/students (22).jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+        <div class="numbertext">21 / 31</div>
+        <img src="images/students (26).jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">22 / 31</div>
+      <img src="images/students (33).jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">23 / 31</div>
+      <img src="images/students (25).jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">24 / 31</div>
+      <img src="images/events (7).jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">25 / 31</div>
+      <img src="images/exco_p.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">26 / 31</div>
+      <img src="images/sport (20).jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">27 / 31</div>
+      <img src="images/class/tetfund.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">28 / 31</div>
+      <img src="images/students (35).jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">29 / 31</div>
+      <img src="images/students (42).jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">30 / 31</div>
+      <img src="images/students (45).jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">31 / 31</div>
+      <img src="images/students (48).jpg" style="width:100%">
+    </div>
+
+    <!-- Next/previous controls -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <!-- Caption text -->
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+  </div>
+</div>
+
+<!-------------------------Fixed Bottom NavBar-------------------------->
+
+<div class="d-sm-none">
+    <div class="nav__menu" id="nav-menu">
+       <div >
+            <a href="index.html" class="fixed__bottom active">
+            <i class="fas fa-house-user "></i>
+            <p>Home</p> 
+            </a>
+       </div>
+       <div>
+        <a href="about.html" class="fixed__bottom active">
+            <i class="fas fa-info"></i>
+            <p>About</p>  
+        </a>
+           
+       </div>
+       <div>
+           <a href="#" class="fixed__bottom">
+                <i class="fas fa-file-image"></i>
+                <p>Pictures</p>
+            </a>
+       </div>
+       <div>
+           
+           <a href="#notifications" class="fixed__bottom">
+                <i class="fas fa-bell"><small class="notification-count">7+</small></i>
+                <p>Notification</p>
+           </a>
+       </div>
+    </div>     
+</div>
+
+
+<!----------------- Fixed Buttom Bar  ------------------->
+    <!-- javascripts  -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/jquery.sticky-sidebar.min.js"></script>
+    <script src="main.js"></script>
+
+<script>
+  // Open the Modal
+function openModal() {
+document.getElementById("myModal").style.display = "block";
+}
+
+// Close the Modal
+function closeModal() {
+document.getElementById("myModal").style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+var i;
+var slides = document.getElementsByClassName("mySlides");
+var dots = document.getElementsByClassName("demo");
+var captionText = document.getElementById("caption");
+if (n > slides.length) {slideIndex = 1}
+if (n < 1) {slideIndex = slides.length}
+for (i = 0; i < slides.length; i++) {
+  slides[i].style.display = "none";
+}
+for (i = 0; i < dots.length; i++) {
+  dots[i].className = dots[i].className.replace(" active", "");
+}
+slides[slideIndex-1].style.display = "block";
+dots[slideIndex-1].className += " active";
+captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>  
+    </div>
+    
+</body>
+</html>
