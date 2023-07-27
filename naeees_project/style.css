@@ -275,6 +275,10 @@ body.down .header-default.clone {
         padding-right: 1.3rem;
         padding-left: 1.3rem;
     }
+
+    .about__written {
+        width: 100%;
+    }
 }
 
 @media only screen and (max-width: 767px) {
@@ -700,6 +704,7 @@ button:focus {
 .post .thumb .post-image{
     width: max-content;
     height: max-content;
+    /* border-radius: 50%; */
 }
 
 .post .thumb .inner .trend-images{
@@ -1077,7 +1082,7 @@ section {
     margin-right: 10px;
 }
 
-.nav-pills .nav-link.current, .nav-pills .show>.nav-link {
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
     color: #fff !important;
     background-color: #6e72fc;
     background-image: linear-gradient(315deg, #6e72fc 0%, #ad1deb 74%);
@@ -1829,8 +1834,32 @@ footer .footer-inner .copyright {
     justify-content: center;
     align-items: center;
 }
+
+.notifications {
+    position: fixed;
+    bottom: 5rem;
+    background: white;
+    color: #570f75;
+    align-items: center;
+    right: 1rem;
+    padding: .4rem;
+    display: none;
+}
+
+.notification.unread{
+    background: #8f9bad;
+    
+}
+
+.notification {
+    border: 1px solid black;
+    margin: .6rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
   
-  @media screen and (max-width: 992px) {
+  @media screen and (max-width: 1000px) {
     .lecturers {
       grid-template-columns: repeat(2, 1fr);
     }
