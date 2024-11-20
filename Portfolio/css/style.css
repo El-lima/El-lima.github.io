@@ -728,10 +728,11 @@ a .fa-whatsapp {
 
 
 .project {
-    background: url('../images/background.jpg');
-    background-position: center top;
+    background: url('../images/Eli.jpg');
+    background-position: center fill;
     background-attachment: fixed;
     background-repeat: no-repeat;
+    background-size: cover;
     position: relative;
     z-index: 1;
     color: black;
