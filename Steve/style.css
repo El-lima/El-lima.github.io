@@ -845,12 +845,10 @@ body {font-family: "Teko", Georgia, Serif, "Playfair Display", "Ramaraja";}
   }
 
   .swiper-button-next, .swiper-button-prev {
-    margin-top: -12rem;
+    margin-top: 12rem;
   }
 
-  #order {
-    margin: -40rem 20px 2rem 20px;
-  }
+  
 }
 
 @media (min-width: 1800px) {
