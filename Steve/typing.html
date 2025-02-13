@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send WhatsApp Message</title>
+</head>
+<body>
+    <h1>Send Message via WhatsApp</h1>
+    <form id="whatsappForm" action="https://wa.me/2348084276795" method="get" target="_blank">
+        <label for="phone">Phone Number (with country code):</label><br>
+        <input type="text" id="phone" name="phone" placeholder="e.g. 1234567890" required><br><br>
+        
+        <label for="message">Message:</label><br>
+        <input type="text" id="message" name="text" placeholder="Write your message" required><br><br>
+        
+        <label for="date">Date:</label><br>
+        <input type="date" id="date" name="date" required><br><br>
+
+        <label for="letters">Letters/Words:</label><br>
+        <input type="text" id="letters" name="letters" placeholder="Any specific words" required><br><br>
+        
+        <button type="submit">Send WhatsApp Message</button>
+    </form>
+
+    <script>
+        // Optional: Preprocess the message input with user data before sending
+        document.getElementById("whatsappForm").addEventListener("submit", function(event) {
+            const phone = document.getElementById("phone").value;
+            const message = document.getElementById("message").value;
+            const date = document.getElementById("date").value;
+            const letters = document.getElementById("letters").value;
+            
+            // Encode the message
+            const fullMessage = `Message: ${message}\nDate: ${date}\nSpecial Words: ${letters}\nNumber: ${phone}`;
+            const encodedMessage = encodeURIComponent(fullMessage);
+            window.alert(encodedMessage);
+
+
+            // Update the form action dynamically
+            this.action = `https://wa.me/${phone}?text=${encodedMessage}`;
+
+            // Allow form submission
+        });
+    </script>
+
+    <?--https://wa.me/?text=My%20name%20is%20olusegun%20Elijah%2C%20I%20have%20a%20even%20on%20a%2019%2F11%2F2025%20and%20i%20am%20expecting%20300%20people ?>
+    </body>
+</html>
